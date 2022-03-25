@@ -28,7 +28,7 @@ app.post("/upload", async (req, res) => {
 
       const newName = nanoid() + path.extname(avatar);
       //Use the mv() method to place the file in upload directory (i.e. "uploads")
-      avatar.mv("./uploads/" + newName);
+      avatar.mv(path.join(__dirname, "/uploads") + newName);
 
       //send response
       res.send({
