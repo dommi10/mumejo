@@ -3,6 +3,7 @@
     <Landing />
     <Service />
     <About />
+    <Banner />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Landing from "~/components/Landing.vue";
 import Service from "~/components/Service.vue";
 import About from "~/components/About.vue";
+import Banner from "~/components/Banner.vue";
 export default {
   head() {
     return {
@@ -25,6 +27,6 @@ export default {
       ],
     };
   },
-  components: { Landing, Service, About },
+  components: { Landing, Service, About, Banner },
 };
 </script>
