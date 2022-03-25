@@ -1,10 +1,11 @@
 <template>
   <div class="flex items-center justify-center w-full h-full">
-    <p>G</p>
+    <Landing />
   </div>
 </template>
 
 <script>
+import Landing from "~/components/Landing.vue";
 export default {
   head() {
     return {
@@ -20,5 +21,6 @@ export default {
       ],
     };
   },
+  components: { Landing },
 };
 </script>

@@ -35,7 +35,7 @@
     </button>
     <div
       v-if="isOpen"
-      class="absolute text-black z-40 flex flex-col items-start h-auto pt-4 pb-2 w-[240px] rounded-md divide-y shadow-md mt-12"
+      class="absolute bg-white text-black z-40 flex flex-col items-start h-auto pt-4 pb-2 w-[240px] rounded-md divide-y shadow-md mt-12"
     >
       <nuxt-link
         class="flex items-center w-full"

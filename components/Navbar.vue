@@ -7,7 +7,7 @@
       class="hidden fixed top-0 lg:flex items-center text-sm font-semibold 2xl:text-base justify-between leading-[1.25rem] tracking-[-0.015em] h-[80px] w-full bg-[#01060B]"
     >
       <ul
-        class="flex items-center justify-between w-full px-4 mx-auto max-w-screen-lg"
+        class="flex items-center justify-between w-full max-w-screen-lg px-4 mx-auto"
       >
         <li class="flex items-center justify-center">
           <NuxtLink :to="localePath('/')">
@@ -19,9 +19,9 @@
           </NuxtLink>
         </li>
         <ul
-          class="flex space-x-4 items-center justify-center uppercase text-xs"
+          class="flex items-center justify-center space-x-4 text-xs uppercase"
         >
-          <li class="hover:font-bold transition duration-300">
+          <li class="transition duration-300 hover:font-bold">
             <NuxtLink :to="localePath('/')">{{ $t("home") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
@@ -97,7 +97,7 @@
           <transition name="slide-fade">
             <ul
               v-if="menuOpen"
-              class="absolute w-full min-h-[600px] z-10 top-[50px] left-0 py-4 flex flex-col space-y-2 px-3 transition duration-300 bg-gray-50"
+              class="absolute uppercase w-full min-h-[600px] z-10 top-[50px] left-0 py-4 flex flex-col space-y-2 px-3 transition duration-300 bg-[#000000cc]"
             >
               <ul class="flex flex-col items-start w-full pt-2">
                 <li class="w-full py-4 border-b">
@@ -112,18 +112,11 @@
                 <li class="w-full py-4 border-b">
                   <NuxtLink :to="localePath('/')">{{ $t("contact") }}</NuxtLink>
                 </li>
-              </ul>
-              <ul class="flex flex-col items-start w-full">
                 <li class="flex items-center w-full py-4 space-x-4 border-b">
                   <langage-switcher
                     :open-or-close="showLangages"
                     @showLangageDropdown="showLangageDropdown"
                   />
-                </li>
-                <li class="w-full py-4 border-b">
-                  <NuxtLink :to="localePath('/contact')">{{
-                    $t("contact")
-                  }}</NuxtLink>
                 </li>
               </ul>
             </ul>
