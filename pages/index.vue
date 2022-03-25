@@ -2,12 +2,14 @@
   <div class="flex flex-col items-center justify-center w-full h-full">
     <Landing />
     <Service />
+    <About />
   </div>
 </template>
 
 <script>
 import Landing from "~/components/Landing.vue";
 import Service from "~/components/Service.vue";
+import About from "~/components/About.vue";
 export default {
   head() {
     return {
@@ -23,6 +25,6 @@ export default {
       ],
     };
   },
-  components: { Landing, Service },
+  components: { Landing, Service, About },
 };
 </script>

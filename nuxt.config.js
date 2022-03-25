@@ -90,6 +90,9 @@ export default {
           service4Title: "MumejoLog Transport & logistic service",
           service4Description:
             "The MumejoLog Transport & logistic is serving you in transportation of your vehicles and any other goods from Kampala to the DRC (Goma-Kinshasa-Butembo-Beni-Bunia-Kisangani...)",
+          who: "Who we are",
+          whoDesc:
+            "MumejoLog's importing your dream vehicles with the mission To facilitate the intermediary between vehicle buyers and manufacturing companies To help buyers place orders at the official site for the purchase of the vehicles of their choice To facilitate the importation of vehicles from the manufacturing house to the customer's destination in complete safety Allocation of vehicles to the public for such or such other event. MumejoLog Service's mission is to import vehicles to its customers by guaranteeing their safety. We also offer the service of obtaining visas for countries such as: China, the UAE, China, Canada, the USA, Belgium, France, etc. for your travels.. We also provide room & residence reservation services, restaurants, etc. for your destination.",
         },
         fr: {
           home: "Acceuil",
@@ -116,6 +119,9 @@ export default {
           service4Title: "MumejoLog Transport & service logistique",
           service4Description:
             "Le MumejoLog Transport & logistique est à votre service dans le transport de vos véhicules et toutes autres marchandises de Kampala vers la RDC (Goma-Kinshasa-Butembo-Beni-Bunia-Kisangani...)",
+          who: "Qui nous sommes",
+          whoDesc:
+            "MumejoLog importe vos véhicules de rêve avec pour mission De faciliter l'intermédiaire entre les acheteurs de véhicules et les entreprises de fabrication D'aider les acheteurs à passer des commandes sur le site officiel pour l'achat des véhicules de leur choix De faciliter l'importation de véhicules de la maison de fabrication à la destination du client en toute sécurité Affectation de véhicules au public pour tel ou tel autre événement. La mission de MumejoLog Service est d'importer des véhicules à ses clients en garantissant leur sécurité. Nous proposons également le service d'obtention de visas pour des pays tels que : la Chine, les Emirats Arabes Unis, la Chine, le Canada, les USA, la Belgique, la France, etc. pour vos déplacements. votre destination.",
         },
         sw: {
           home: "nyumbani",
@@ -141,6 +147,9 @@ export default {
           service4Title: "MumejoLog Usafiri na huduma ya vifaa",
           service4Description:
             "MumejoLog Transport & logistic inakuhudumia katika usafirishaji wa magari yako na bidhaa nyingine yoyote kutoka Kampala hadi DRC (Goma-Kinshasa-Butembo-Beni-Bunia-Kisangani...)",
+          who: "Sisi ni nani",
+          whoDesc:
+            "MumejoLog inaagiza magari ya ndoto yako na dhamira Ili kuwezesha mpatanishi kati ya wanunuzi wa magari na kampuni za utengenezaji Kusaidia wanunuzi kuweka oda kwenye tovuti rasmi kwa ununuzi wa magari wanayochagua Kurahisisha uagizaji wa magari kutoka kwa nyumba ya utengenezaji hadi kwa mteja. kwa usalama kamili Ugawaji wa magari kwa umma kwa tukio kama hilo au lingine. Dhamira ya Huduma ya MumejoLog ni kuagiza magari kwa wateja wake kwa kuwahakikishia usalama wao. Pia tunatoa huduma ya kupata visa kwa nchi kama vile: Uchina, UAE, Uchina, Kanada, Marekani, Ubelgiji, Ufaransa, n.k. kwa safari zako. Pia tunatoa huduma za kuhifadhi vyumba na makazi, mikahawa, n.k. kwa unakoenda.",
         },
       },
     },
