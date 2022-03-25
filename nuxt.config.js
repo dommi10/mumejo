@@ -77,7 +77,7 @@ export default {
           serviceTitle: "What Services we offer to our clients",
           serviceDescription:
             "Who are in extremely love with eco friendly system.",
-          service1Title: "Mumejo Log sale of vehicules service",
+          service1Title: "mumejolog sale of vehicules service",
           service1Description:
             "The MumejoLog sale of vehicles service we helps you to buy and to sell vehicles. With the payment of 50% cash for the car, we brought you your car from Japan to whenever you are.",
           service2Title: "MumejoLog Visa reservation service",

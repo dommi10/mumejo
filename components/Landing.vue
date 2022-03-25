@@ -15,7 +15,7 @@
         }}</span>
         <span
           class="w-full text-5xl font-semibold tracking-tight text-left uppercase"
-          >MUMEJO LOG</span
+          >mumejolog</span
         >
         <p class="w-full pb-5 text-sm font-light text-left">
           {{ $t("intro") }}
