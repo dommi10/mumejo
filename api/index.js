@@ -14,7 +14,7 @@ app.use(
   })
 );
 
-app.post("/upload", async (req, res) => {
+app.post("/api/upload", async (req, res) => {
   try {
     const alphabet = "1234567890qwertyuiopasdfghjklzxcvbnm-_";
     const nanoid = customAlphabet(alphabet, 36);
@@ -58,17 +58,8 @@ app.post("/upload", async (req, res) => {
   }
 });
 
-app.get("/team", (req, res) => {
+app.get("/api/team", (req, res) => {
   res.json({ data: "from api his owesome" });
 });
 
 module.exports = app;
-
-// Start standalone server if directly running
-if (require.main === module) {
-  const port = process.env.PORT || 3000;
-  app.listen(port, () => {
-    // eslint-disable-next-line no-console
-    console.log(`API server listening on port ${port}`);
-  });
-}
