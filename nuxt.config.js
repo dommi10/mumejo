@@ -16,7 +16,7 @@ export default {
 
   // serverMiddleware: [{ path: "/api", handler: "~/api" }],
   serverMiddleware: {
-    "/api": "~/api",
+    "/api": "~/api/index.js",
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

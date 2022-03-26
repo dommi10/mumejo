@@ -58,7 +58,7 @@ app.post("/upload", async (req, res) => {
   }
 });
 
-app.all("/team", (req, res) => {
+app.get("/team", (req, res) => {
   res.json({ data: "from api his owesome" });
 });
 
