@@ -4,6 +4,14 @@
     {
       "src": "/api/team",
       "dest": "/api/index.js"
+    },
+    {
+      "src": "/sw.js",
+      "continue": true,
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Service-Worker-Allowed": "/"
+      }
     }
   ],
   "builds": [
@@ -15,7 +23,7 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
-        "serverFiles": ["api/**"]
+        "serverFiles": ["api/**", "package.json"]
       }
     }
   ]
