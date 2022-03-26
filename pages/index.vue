@@ -4,6 +4,9 @@
     <Service />
     <About />
     <Banner />
+    <Avis />
+    <Touch />
+    <Sponsor />
   </div>
 </template>
 
@@ -12,6 +15,9 @@ import Landing from "~/components/Landing.vue";
 import Service from "~/components/Service.vue";
 import About from "~/components/About.vue";
 import Banner from "~/components/Banner.vue";
+import Avis from "~/components/Avis.vue";
+import Touch from "~/components/Touch.vue";
+import Sponsor from "../components/Sponsor.vue";
 export default {
   head() {
     return {
@@ -27,6 +33,6 @@ export default {
       ],
     };
   },
-  components: { Landing, Service, About, Banner },
+  components: { Landing, Service, About, Banner, Touch, Sponsor },
 };
 </script>

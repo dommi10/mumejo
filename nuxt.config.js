@@ -98,6 +98,32 @@ export default {
           who: "Who we are",
           whoDesc:
             "MumejoLog's importing your dream vehicles with the mission To facilitate the intermediary between vehicle buyers and manufacturing companies To help buyers place orders at the official site for the purchase of the vehicles of their choice To facilitate the importation of vehicles from the manufacturing house to the customer's destination in complete safety Allocation of vehicles to the public for such or such other event. MumejoLog Service's mission is to import vehicles to its customers by guaranteeing their safety. We also offer the service of obtaining visas for countries such as: China, the UAE, China, Canada, the USA, Belgium, France, etc. for your travels.. We also provide room & residence reservation services, restaurants, etc. for your destination.",
+          thinkTitle: "What people think about us",
+          thinkDescription: "Some testimonials from our satisfied customers.",
+          think1Title: "JOHN from Kinshasa",
+          think1Description:
+            "MumejoLog offers the best auto import services! Experience shows that offering quality action over time is appreciated because few people have this expertise in the DRC.",
+          think2Title: "JNATHAN MUHONGYA from DRC",
+          think2Description:
+            "MumejoLog offers the best auto import and visa services! Last time when I went to Dubai I enjoyed the whole organization for this respectable company. Experience shows that offering quality action over time is appreciated because few people have this expertise in the DRC.",
+          think3Title: "ALLI from Uganda",
+          think3Description:
+            "MumejoLog offers the best auto import services! Experience shows that offering quality action over time is appreciated because few people have this expertise in the DRC.",
+          think4Title: "Julien from Bukavu",
+          think4Description:
+            "Congratulations MumejoLog I got satisfied with my BMW 3",
+          think5Title: "Eric",
+          think5Description:
+            "I appreciate the visa service of MumejoLog. Thank you MumejoLOg",
+          think6Title: "NAOMIE",
+          think6Description:
+            "Thank you MumejoLog for your services I appreciate",
+          serviceMessageTitle: "Experience Great services",
+          inTouch: "get in touch with us",
+          serviceDesc:
+            "MumejoLog is a company that's offering brand new cars to clients and also facilitation them to get visa from everywhere in the world. If you choose MumejoLog today, as our client your safety is our good",
+          patherns: "Our Partners",
+          pathernsDesc: "Who are in extremely love with eco friendly system.",
         },
         fr: {
           home: "Acceuil",
@@ -127,6 +153,31 @@ export default {
           who: "Qui nous sommes",
           whoDesc:
             "MumejoLog importe vos véhicules de rêve avec pour mission De faciliter l'intermédiaire entre les acheteurs de véhicules et les entreprises de fabrication D'aider les acheteurs à passer des commandes sur le site officiel pour l'achat des véhicules de leur choix De faciliter l'importation de véhicules de la maison de fabrication à la destination du client en toute sécurité Affectation de véhicules au public pour tel ou tel autre événement. La mission de MumejoLog Service est d'importer des véhicules à ses clients en garantissant leur sécurité. Nous proposons également le service d'obtention de visas pour des pays tels que : la Chine, les Emirats Arabes Unis, la Chine, le Canada, les USA, la Belgique, la France, etc. pour vos déplacements. votre destination.",
+          thinkTitle: "Ce que les gens pensent de nous",
+          thinkDescription: "Quelques témoignages de nos client ssatisfaits.",
+          think1Title: "JOHN de Kinshasa",
+          think1Description:
+            "MumejoLog offre les meilleurs services d'importation automatique ! L'expérience montre que proposer une action de qualité dans la durée est apprécié car peu de personnes ont cette expertise en RDC.",
+          think2Title: "JNATHAN MUHONGYA de RDC",
+          think2Description:
+            "MumejoLog offre les meilleurs services d'import automatique et de visa ! La dernière fois que je suis allé à Dubaï, j'ai apprécié toute l'organisation de cette entreprise respectable. L'expérience montre que proposer une action de qualité dans la durée est apprécié car peu de personnes ont cette expertise en RDC.",
+          think3Title: "ALLI d'Ouganda",
+          think3Description:
+            "MumejoLog offre les meilleurs services d'importation automatique ! L'expérience montre que proposer une action de qualité dans la durée est apprécié car peu de personnes ont cette expertise en RDC.",
+          think4Title: "Julien de Bukavu",
+          think4Description:
+            "Félicitations MumejoLog je suis satisfait de ma BMW 3",
+          think5Title: "Eric",
+          think5Description:
+            "J'apprécie le service des visas de MumejoLog. Merci MumejoLOg",
+          think6Title: "NAOMIE",
+          think6Description: "Merci MumejoLog pour vos services j'apprécie",
+          serviceMessageTitle: "Découvrez d'excellents services",
+          inTouch: "prenez contact avec nous",
+          serviceDesc:
+            "MumejoLog est une entreprise qui propose des voitures neuves à ses clients et leur permet également d'obtenir un visa partout dans le monde. Si vous choisissez MumejoLog aujourd'hui, en tant que client, votre sécurité est notre bien",
+          patherns: "Nos partenaires",
+          pathernsDesc: "Qui sont extrêmement amoureux du système écologique.",
         },
         sw: {
           home: "nyumbani",
@@ -155,6 +206,30 @@ export default {
           who: "Sisi ni nani",
           whoDesc:
             "MumejoLog inaagiza magari ya ndoto yako na dhamira Ili kuwezesha mpatanishi kati ya wanunuzi wa magari na kampuni za utengenezaji Kusaidia wanunuzi kuweka oda kwenye tovuti rasmi kwa ununuzi wa magari wanayochagua Kurahisisha uagizaji wa magari kutoka kwa nyumba ya utengenezaji hadi kwa mteja. kwa usalama kamili Ugawaji wa magari kwa umma kwa tukio kama hilo au lingine. Dhamira ya Huduma ya MumejoLog ni kuagiza magari kwa wateja wake kwa kuwahakikishia usalama wao. Pia tunatoa huduma ya kupata visa kwa nchi kama vile: Uchina, UAE, Uchina, Kanada, Marekani, Ubelgiji, Ufaransa, n.k. kwa safari zako. Pia tunatoa huduma za kuhifadhi vyumba na makazi, mikahawa, n.k. kwa unakoenda.",
+          thinkTitle: "Watu wanafikiri nini juu yetu",
+          thinkDescription: "Ushuuda ya wateja wetu",
+          think1Title: "JOHN kutoka Kinshasa",
+          think1Description:
+            "MumejoLog inatoa huduma bora zaidi za kuagiza otomatiki! Uzoefu unaonyesha kuwa kutoa hatua za ubora kwa wakati kunathaminiwa kwa sababu watu wachache wana utaalamu huu nchini DRC.",
+          think2Title: "JNATHAN MUHONGYA kutoka DRC",
+          think2Description:
+            "MumejoLog inatoa huduma bora zaidi za kuagiza otomatiki na visa! Mara ya mwisho nilipoenda Dubai nilifurahia shirika zima la kampuni hii yenye heshima. Uzoefu unaonyesha kuwa kutoa hatua za ubora kwa wakati kunathaminiwa kwa sababu watu wachache wana utaalamu huu nchini DRC.",
+          think3Title: "ALLI Kutoka Uganda",
+          think3Description:
+            "MumejoLog inatoa huduma bora zaidi za kuagiza otomatiki! Uzoefu unaonyesha kuwa kutoa hatua za ubora kwa wakati kunathaminiwa kwa sababu watu wachache wana utaalamu huu nchini DRC.",
+          think4Title: "Julien Kutoka Bukavu",
+          think4Description: "Hongera MumejoLog Nimeridhika na BMW 3 yangu",
+          think5Title: "Eric",
+          think5Description:
+            "Ninashukuru huduma ya visa ya MumejoLog. Asante MumejoLOG",
+          think6Title: "NAOMIE",
+          think6Description: "Asante MumejoLog kwa huduma zako nashukuru",
+          serviceMessageTitle: "Pata huduma bora",
+          inTouch: "wasiliana",
+          serviceDesc:
+            "MumejoLog ni kampuni inayotoa magari mapya kwa wateja na pia kuwawezesha kupata visa kutoka kila mahali duniani. Ukichagua MumejoLog leo, kama mteja wetu usalama wako ni mzuri wetu",
+          patherns: "Washirika wetu",
+          pathernsDesc: "Ambao wanapenda sana mfumo rafiki wa mazingira.",
         },
       },
     },
