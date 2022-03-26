@@ -14,10 +14,10 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  // serverMiddleware: [{ path: "/api", handler: "~/api" }],
-  serverMiddleware: {
-    "/api": "~/api/index.js",
-  },
+  serverMiddleware: [{ path: "/api", handler: "~/api" }],
+  // serverMiddleware: {
+  //   "/api": "~/api/index.js",
+  // },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
