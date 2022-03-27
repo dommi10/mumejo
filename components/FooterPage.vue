@@ -13,22 +13,22 @@
               >{{ $t("link1Title") }}</span
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("jobs") }}</NuxtLink
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("brand") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("inverstisor") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("terms") }}
             </NuxtLink>
@@ -39,22 +39,22 @@
               >{{ $t("link2Title") }}</span
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("jobs") }}</NuxtLink
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("brand") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("inverstisor") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("terms") }}
             </NuxtLink>
@@ -65,22 +65,22 @@
               >{{ $t("link3Title") }}</span
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("jobs") }}</NuxtLink
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("brand") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("inverstisor") }}
             </NuxtLink>
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left font-normal lowercase first-letter:uppercase"
               >{{ $t("terms") }}
             </NuxtLink>
@@ -97,7 +97,7 @@
             </p>
             <div class="flex items-center w-full space-x-4">
               <NuxtLink
-                :to="localePath('#')"
+                :to="'#'"
                 class="hover:text-orange-400 text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@
                 </svg>
               </NuxtLink>
               <NuxtLink
-                :to="localePath('#')"
+                :to="'#'"
                 class="hover:text-orange-400 text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@
                 </svg>
               </NuxtLink>
               <NuxtLink
-                :to="localePath('#')"
+                :to="'#'"
                 class="hover:text-orange-400 text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@
                 </svg>
               </NuxtLink>
               <NuxtLink
-                :to="localePath('#')"
+                :to="'#'"
                 class="hover:text-orange-400 text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@
               >{{ $t("link5Title") }}</span
             >
             <NuxtLink
-              :to="localePath('#')"
+              :to="'#'"
               class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
               >{{ $t("info") }}</NuxtLink
             >

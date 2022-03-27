@@ -37,14 +37,12 @@ export default {
         {
           title: "Mumejo",
           description: "Managing Director (Sales) of MumejoLog",
-          imageUrl:
-            "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+          imageUrl: "~/assets/images/general.jpg",
         },
         {
           title: "Staff MumejoLog",
           description: "Creative promotion Directors (Project)",
-          imageUrl:
-            "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          imageUrl: "~/assets/images/staff.jpg",
         },
         {
           title: "Master Mike",
