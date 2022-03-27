@@ -1,0 +1,58 @@
+<template>
+  <div class="h-auto bg-white pt-14">
+    <div class="flex flex-col w-full h-full max-w-screen-lg px-4 mx-auto">
+      <div
+        class="flex flex-col items-center w-full max-w-screen-lg mx-auto space-y-8"
+      >
+        <span
+          class="text-[#222222] tracking-tight md:leading-5 font-semibold text-center text-4xl"
+          >{{ $t("team") }}</span
+        >
+      </div>
+
+      <div
+        class="grid w-full h-auto grid-cols-1 py-12 gap-y-2 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-8"
+      >
+        <TeamItem
+          v-for="item in teams"
+          :key="item.title"
+          :title="item.title"
+          :description="item.description"
+          :imageUrl="
+            item.imageUrl
+              ? item.imageUrl
+              : 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+          "
+        />
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import TeamItem from "./TeamItem.vue";
+export default {
+  data() {
+    return {
+      teams: [
+        {
+          title: "Mumejo",
+          description: "Managing Director (Sales) of MumejoLog",
+          imageUrl:
+            "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        },
+        {
+          title: "Staff MumejoLog",
+          description: "Creative promotion Directors (Project)",
+          imageUrl:
+            "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        },
+        {
+          title: "Master Mike",
+          description: "Senior Core Developer",
+          imageUrl: "",
+        },
+      ],
+    };
+  },
+};
+</script>

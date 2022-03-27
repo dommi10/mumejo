@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="w-full px-4 z-10 h-[50px] lg:h-[80px] overflow-hidden bg-[#01060B] fixed top-0 border-b shadow-md text-white border-gray-700"
+    class="w-full px-4 z-50 h-[50px] lg:h-[80px] overflow-hidden bg-[#01060B] fixed top-0 border-b shadow-md text-white border-gray-700"
   >
     <!-- desktop -->
     <ul
@@ -25,13 +25,15 @@
             <NuxtLink :to="localePath('/')">{{ $t("home") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
-            <NuxtLink :to="localePath('/')">{{ $t("about") }}</NuxtLink>
+            <NuxtLink :to="localePath('/about')">{{ $t("about") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
             <NuxtLink :to="localePath('/')">{{ $t("cars") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
-            <NuxtLink :to="localePath('/')">{{ $t("contact") }}</NuxtLink>
+            <NuxtLink :to="localePath('/contact')">{{
+              $t("contact")
+            }}</NuxtLink>
           </li>
           <li class="-mt-2">
             <langage-switcher
@@ -104,13 +106,17 @@
                   <NuxtLink :to="localePath('/')">{{ $t("home") }}</NuxtLink>
                 </li>
                 <li class="w-full py-4 border-b">
-                  <NuxtLink :to="localePath('/')">{{ $t("about") }}</NuxtLink>
+                  <NuxtLink :to="localePath('/about')">{{
+                    $t("about")
+                  }}</NuxtLink>
                 </li>
                 <li class="w-full py-4 border-b">
                   <NuxtLink :to="localePath('/')">{{ $t("cars") }}</NuxtLink>
                 </li>
                 <li class="w-full py-4 border-b">
-                  <NuxtLink :to="localePath('/')">{{ $t("contact") }}</NuxtLink>
+                  <NuxtLink :to="localePath('/contact')">{{
+                    $t("contact")
+                  }}</NuxtLink>
                 </li>
                 <li class="flex items-center w-full py-4 space-x-4 border-b">
                   <langage-switcher

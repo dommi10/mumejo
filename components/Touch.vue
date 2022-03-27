@@ -18,7 +18,7 @@
 
         <NuxtLink
           class="bg-[#fab700] self-center border-transparent border hover:text-[#fab700] hover:bg-transparent hover:border-[#fab700] text-sm transition duration-500 font-medium px-[40px] leading-[40px] uppercase"
-          :to="localePath('/')"
+          :to="localePath('/contact')"
         >
           {{ $t("inTouch") }}
         </NuxtLink>

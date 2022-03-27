@@ -1,27 +1,28 @@
 <template>
   <div class="flex flex-col items-center justify-center w-full h-full">
-    <Landing />
+    <PageLeading :title="title" />
+
+    <About :boutonActive="false" />
     <Service />
-    <About />
     <Banner />
-    <Avis />
+    <Team />
     <Touch />
     <Sponsor />
   </div>
 </template>
 
 <script>
-import Landing from "~/components/Landing.vue";
-import Service from "~/components/Service.vue";
 import About from "~/components/About.vue";
 import Banner from "~/components/Banner.vue";
-import Avis from "~/components/Avis.vue";
+import Team from "~/components/Team.vue";
 import Touch from "~/components/Touch.vue";
 import Sponsor from "../components/Sponsor.vue";
+import PageLeading from "~/components/PageLeading.vue";
+import Service from "~/components/Service.vue";
 export default {
   head() {
     return {
-      title: "Home - MumejoLog",
+      title: "About - MumejoLog",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
@@ -32,6 +33,11 @@ export default {
       ],
     };
   },
-  components: { Landing, Service, About, Banner, Touch, Sponsor },
+  components: { About, Banner, Touch, Sponsor, PageLeading, Team, Service },
+  data() {
+    return {
+      title: this.$t("about"),
+    };
+  },
 };
 </script>
