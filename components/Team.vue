@@ -37,12 +37,12 @@ export default {
         {
           title: "Mumejo",
           description: "Managing Director (Sales) of MumejoLog",
-          imageUrl: "general.jpg",
+          imageUrl: "/general.jpg",
         },
         {
           title: "Staff MumejoLog",
           description: "Creative promotion Directors (Project)",
-          imageUrl: "staff.jpg",
+          imageUrl: "/staff.jpg",
         },
         {
           title: "Master Mike",
