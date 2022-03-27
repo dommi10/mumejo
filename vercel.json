@@ -1,5 +1,14 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": ["package.json"]
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/sw.js",
@@ -7,15 +16,6 @@
       "headers": {
         "Cache-Control": "public, max-age=0, must-revalidate",
         "Service-Worker-Allowed": "/"
-      }
-    }
-  ],
-  "builds": [
-    {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
-      "config": {
-        "serverFiles": ["package.json"]
       }
     }
   ]
