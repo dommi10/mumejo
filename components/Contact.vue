@@ -134,15 +134,16 @@ export default {
   props: {
     address: {
       type: String,
-      default: "Tanzanie Lindi Region Selous Game Reserve.",
+      default:
+        "Rdr-Butembo, Boulevard Joseph Kabila, Immeuble Dr. Kisonia Kidubai, No.121, 3ième niveau",
     },
     number: {
       type: String,
-      default: "00 (243) 987000000",
+      default: "00 (243) 973 941 900 | 00 (256) 753 190295",
     },
     email: {
       type: String,
-      default: "mail@mail.com",
+      default: "mumejolog@gmail.com",
     },
   },
   data() {
@@ -151,8 +152,8 @@ export default {
       attribution:
         '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       zoom: 17,
-      center: [0.1333945, 29.2867908],
-      markerLatLng: [0.1333945, 29.2867908],
+      center: [0.1071124, 29.3253537],
+      markerLatLng: [0.1071124, 29.3253537],
     };
   },
 };
