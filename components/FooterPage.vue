@@ -1,7 +1,7 @@
 <template>
   <footer class="w-full bg-[#04091E]">
     <div
-      class="min-h-[50vh] justify-center items-center max-w-screen-lg mx-auto flex flex-col pb-6"
+      class="min-h-[50vh] px-4 pt-6 md:pt-0 md:px-0 justify-center items-center max-w-screen-lg mx-auto flex flex-col pb-6"
     >
       <div class="flex items-center flex-1 w-full">
         <div
@@ -221,7 +221,7 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-center space-x-1">
+      <div class="flex items-center justify-center pt-6 space-x-1 md:pt-0">
         <p
           class="text-[#777777] tracking-tight text-sm text-left lowercase first-letter:uppercase"
         >

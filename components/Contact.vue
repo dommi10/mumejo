@@ -9,10 +9,10 @@
       </client-only>
     </div>
     <form
-      class="grid w-full grid-cols-1 gap-1 pt-20 lg:grid-cols-3 md:grid-cols-2 lg:gap-x-6"
+      class="grid w-full grid-cols-1 gap-1 px-4 pt-20 md:px-0 lg:grid-cols-3 md:grid-cols-2 lg:gap-x-6"
     >
       <div class="flex flex-col w-full space-y-6 lg:col-span-2">
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-x-1 md:gap-x-0">
           <label for="name" class="flex items-start space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@
             placeholder="Enter your name"
           />
         </div>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-x-1 md:gap-x-0">
           <label for="email" class="flex items-center justify-start space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@
             placeholder="Enter your mail"
           />
         </div>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-x-1 md:gap-x-0">
           <label
             for="subject"
             class="flex items-center justify-start space-x-2"

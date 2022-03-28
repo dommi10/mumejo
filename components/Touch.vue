@@ -5,7 +5,7 @@
   >
     <div class="!bg-[#000000cc] w-full text-white">
       <div
-        class="flex flex-col mx-auto text-center items-center justify-center w-full max-w-[800px] min-h-[30vh] pt-6 pb-4 space-y-[10px]"
+        class="flex flex-col px-4 md:px-0 mx-auto text-center items-center justify-center w-full max-w-[800px] min-h-[30vh] pt-6 pb-4 space-y-[10px]"
       >
         <span
           class="w-full text-4xl font-semibold tracking-tight text-center lowercase first-letter:uppercase"

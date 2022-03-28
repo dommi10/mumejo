@@ -142,10 +142,10 @@ export default {
       menuOpen: false,
     };
   },
-  async fetch() {
-    const data = await this.$axios.get("/api/team");
-    console.log(data);
-  },
+  // async fetch() {
+  //   const data = await this.$axios.get("/api/team");
+  //   console.log(data);
+  // },
   methods: {
     showLangageDropdown(value) {
       this.showLangages = value;
