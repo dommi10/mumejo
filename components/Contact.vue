@@ -128,8 +128,6 @@
   </div>
 </template>
 <script>
-// import { Icon } from "leaflet";
-
 export default {
   props: {
     address: {
@@ -151,7 +149,7 @@ export default {
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution:
         '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      zoom: 17,
+      zoom: 13,
       center: [0.1071124, 29.3253537],
       markerLatLng: [0.1071124, 29.3253537],
     };
