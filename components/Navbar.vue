@@ -28,7 +28,7 @@
             <NuxtLink :to="localePath('/about')">{{ $t("about") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
-            <NuxtLink :to="localePath('/')">{{ $t("cars") }}</NuxtLink>
+            <NuxtLink :to="localePath('/cars')">{{ $t("cars") }}</NuxtLink>
           </li>
           <li class="hover:font-bold">
             <NuxtLink :to="localePath('/contact')">{{
@@ -111,7 +111,9 @@
                   }}</NuxtLink>
                 </li>
                 <li class="w-full py-4 border-b">
-                  <NuxtLink :to="localePath('/')">{{ $t("cars") }}</NuxtLink>
+                  <NuxtLink :to="localePath('/cars')">{{
+                    $t("cars")
+                  }}</NuxtLink>
                 </li>
                 <li class="w-full py-4 border-b">
                   <NuxtLink :to="localePath('/contact')">{{

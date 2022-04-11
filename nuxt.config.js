@@ -44,7 +44,16 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+
+  axios: {
+    baseURL: process.env.BASE_URL,
+    headers: {
+      common: {
+        Accept: "application/json, text/plain, */*",
+        "Access-Control-Allow-Origin": "*",
+      },
+    },
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
