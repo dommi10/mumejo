@@ -21,12 +21,14 @@
     </div>
     <div
       v-else
-      class="flex pt-[0px] overflow-hidden items-start w-full h-[90vh]"
+      class="flex pt-[0px] md:overflow-hidden flex-col md:flex-row md:items-start w-full md:min-h-[90vh] md:max-h-[90vh]"
     >
-      <div class="relative w-[70%] h-full">
+      <div
+        class="relative w-full md:w-[70%] md:max-h-[90vh] md:min-h-[90vh] min-h-[40vh] max-h-[40vh]"
+      >
         <img
           :src="selectedImage"
-          class="object-cover w-full h-full"
+          class="absolute inset-0 object-cover w-full h-full"
           alt="images"
         />
         <button
@@ -71,8 +73,27 @@
         </button>
       </div>
       <div
-        class="flex w-[30%] no-scroll h-full overflow-y-auto flex-col space-y-2 px-6 py-10"
+        class="flex w-full md:w-[30%] no-scroll h-full md:overflow-y-auto flex-col space-y-2 px-6 py-6"
       >
+        <button
+          @click="back"
+          class="py-2 focus:outline-none focus:ring-transparent md:py-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M11 17l-5-5m0 0l5-5m-5 5h12"
+            />
+          </svg>
+        </button>
         <div class="flex items-center justify-center">
           <h5
             class="text-5xl font-medium tracking-tighter text-center capitalize"
@@ -139,11 +160,12 @@
             v-for="color in item.colors"
             :key="color.id"
             @click="changeColor(color)"
-            class="w-10 h-10 p-2 transition-all duration-300 border-4 rounded-full shadow-sm"
+            class="w-10 h-10 p-2 transition-all duration-300 border-4 rounded-full shadow-sm focus:outline-none focus:ring-transparent"
             :style="{ backgroundColor: color.color.hex }"
           ></button>
         </div>
         <p
+          vifactiveColor.color
           class="w-full pt-2 capitalize !first-letter:uppercase text-sm font-medium tracking-tight text-center"
         >
           {{ activeColor.color.name }}
@@ -162,6 +184,7 @@
             Commander votre {{ item.name }}
           </h5>
           <button
+            @click="closeModal"
             class="inline-flex items-center justify-center w-full h-10 text-sm text-white uppercase bg-orange-600 rounded-full"
           >
             Continuer la Commande
@@ -169,12 +192,16 @@
         </div>
       </div>
     </div>
+    <add-commande
+      :url="'/commande'"
+      :selected-role="selectedRole"
+      @refetch="refresh"
+      @refreshData="refreshData"
+    />
   </div>
 </template>
 
 <script>
-import { throws } from "assert";
-
 export default {
   head() {
     return {
@@ -193,175 +220,52 @@ export default {
     return {
       disableNext: false,
       disablePrev: true,
-      activeColor: {
-        color: {
-          id: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-          name: "jaune mauve",
-          hex: "#fffff9",
-          enabled: true,
-          createdAt: "2022-04-08T17:48:02.902Z",
-        },
-        images: [
-          {
-            id: "6e1vtw1ybk6ocz2fkw0_qdjtmqx9gi5uq98j",
-            type: "INTERIOR",
-            url: "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-f4_06ce-avatar.jpg",
-            colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorsOnCarsColorId: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-          },
-          {
-            id: "sie47w_o0_wlwrxqcxx63bjoskelhxktxcxn",
-            type: "INTERIOR",
-            url: "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
-            colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorsOnCarsColorId: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-          },
-        ],
-      },
+      activeColor: {},
       activeIndex: 0,
       selectedImage:
         "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
-      item: {
-        id: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-        name: "Tesla Y 2",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium qui iusto cumque, ducimus voluptatum nisi sed soluta quas aut voluptatibus incidunt minus numquam veritatis corporis optio, dignissimos quasi exercitationem?",
-        marqueId: "7rwwxa17u_m9bt175xdj8hbklkvlomjowal0",
-        speed: 230,
-        time: 100,
-        enabled: true,
-        createdAt: "2022-04-08T13:36:20.292Z",
-        colors: [
-          {
-            carId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorId: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-            assignedAt: "2022-04-08T17:51:52.247Z",
-            images: [
-              {
-                id: "6e1vtw1ybk6ocz2fkw0_qdjtmqx9gi5uq98j",
-                type: "INTERIOR",
-                url: "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-f4_06ce-avatar.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-              },
-              {
-                id: "sie47w_o0_wlwrxqcxx63bjoskelhxktxcxn",
-                type: "INTERIOR",
-                url: "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-              },
-            ],
-            color: {
-              id: "2mvuseh2qf6l14ozgrq86n53q4ud8pdn2tr8",
-              name: "jaune mauve",
-              hex: "#fffff9",
-              enabled: true,
-              createdAt: "2022-04-08T17:48:02.902Z",
-            },
-          },
-          {
-            carId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorId: "c_8qxdhxxvix1phwvg1b4hzs36j5mk1jr88p",
-            assignedAt: "2022-04-08T13:36:20.292Z",
-            images: [
-              {
-                id: "00ubst2pgnhavhf5w_db022oukql6uxjv6ki",
-                type: "INTERIOR",
-                url: "https://bafybeihuu6exv5dhe4cddu4go36zkvqil2vtthpp4okm5vzsqspypud6am.ipfs.dweb.link/temp/2022-04-08-17-23-46-4646-p389xlm-bmw.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "c_8qxdhxxvix1phwvg1b4hzs36j5mk1jr88p",
-              },
-              {
-                id: "28hk8vxdnsacqucjeiwmf_8yt_gnv_3vruzg",
-                type: "INTERIOR",
-                url: "https://bafybeiftddolnuac5v7xff55lmvhz2r2ynt36hmmvt7gvymqfgcwdqneqa.ipfs.dweb.link/temp/2022-04-08-16-35-54-5454-xexo0rp-bmw.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "c_8qxdhxxvix1phwvg1b4hzs36j5mk1jr88p",
-              },
-            ],
-            color: {
-              id: "c_8qxdhxxvix1phwvg1b4hzs36j5mk1jr88p",
-              name: "white",
-              hex: "#ffffff",
-              enabled: true,
-              createdAt: "2022-04-07T13:39:38.019Z",
-            },
-          },
-          {
-            carId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorId: "htmmlc3m6re9uurla5expsx1lvct962wwrz5",
-            assignedAt: "2022-04-08T13:36:20.292Z",
-            images: [
-              {
-                id: "p2nk4qcjds1jlr90tx0atgdl72inu4_2opl4",
-                type: "INTERIOR",
-                url: "https://bafybeiftddolnuac5v7xff55lmvhz2r2ynt36hmmvt7gvymqfgcwdqneqa.ipfs.dweb.link/temp/2022-04-08-16-35-54-5454-08737ne-avatar.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "htmmlc3m6re9uurla5expsx1lvct962wwrz5",
-              },
-            ],
-            color: {
-              id: "htmmlc3m6re9uurla5expsx1lvct962wwrz5",
-              name: "black light",
-              hex: "#00000f",
-              enabled: true,
-              createdAt: "2022-04-07T14:42:46.542Z",
-            },
-          },
-          {
-            carId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-            colorId: "seyrwfz7061p5bp4v6qn3vb_zlqm0skx9q5c",
-            assignedAt: "2022-04-08T14:24:07.918Z",
-            images: [
-              {
-                id: "_tt44lpgpaa3g928sx51jop_05610pyye_af",
-                type: "INTERIOR",
-                url: "https://bafybeihuu6exv5dhe4cddu4go36zkvqil2vtthpp4okm5vzsqspypud6am.ipfs.dweb.link/temp/2022-04-08-17-23-46-4646-la7pf7v-avatar.jpg",
-                colorsOnCarsCarId: "nzfst8v9s283oh3dvahegn5az2cj8you0hdo",
-                colorsOnCarsColorId: "seyrwfz7061p5bp4v6qn3vb_zlqm0skx9q5c",
-              },
-            ],
-            color: {
-              id: "seyrwfz7061p5bp4v6qn3vb_zlqm0skx9q5c",
-              name: "green",
-              hex: "#ff7890",
-              enabled: true,
-              createdAt: "2022-04-08T13:58:54.571Z",
-            },
-          },
-        ],
-        marque: {
-          id: "7rwwxa17u_m9bt175xdj8hbklkvlomjowal0",
-          name: "Land Cruise 2",
-          logoUrl:
-            "https://bafybeidmqd5oc5uj6u2hffiiluln6kx6snvsb3lmwunfjutfotd72stp34.ipfs.dweb.link/temp/2022-04-07-07-29-59-5959-rq2buiu-avatar.jpg",
-          enabled: false,
-          createdAt: "2022-04-07T04:30:09.177Z",
-        },
-      },
+      item: {},
+      selectedRole: this.$route.params.id,
     };
   },
   async fetch() {
-    console.log(this.app);
-    const res = await this.$axios.get(
-      this.marqueId === "-1"
-        ? `/cars/get/${this.router.params.id}`
-        : `/cars/search?skip=${this.skip}&take=${this.take}&marqueId=${this.marqueId}`
-    );
+    const res = await this.$axios.get(`/cars/get/${this.$route.params.id}`);
     const { data } = res;
-    const { cars, total } = data;
-    if (cars)
-      this.cars = cars.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
-    if (total) this.total = total;
+    const { cars } = data;
+
+    if (cars) {
+      this.item = cars;
+      this.activeColor = cars.colors.length > 0 ? cars.colors[0] : {};
+    }
   },
   methods: {
+    closeModal() {
+      this.$store.dispatch("modal/toogleModalAddRole");
+    },
+    async refresh() {},
+    modifyData() {
+      this.$store.dispatch("modal/toogleModalAddRole");
+    },
+    refreshData() {
+      this.selectedRole = {
+        id: "",
+        noms: "",
+        adresse: "",
+        email: "",
+        tel: "",
+      };
+    },
     changeColor(color) {
       this.selectedImage =
         color.images.length > 0
           ? color.images[0].url
           : "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg";
       this.activeColor = color;
+      this.disableNext = false;
+    },
+    back() {
+      // this.$route.
+      this.$router.go(-1);
     },
     nextImage(index) {
       if (this.activeColor.images.length > 0)

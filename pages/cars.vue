@@ -3,11 +3,11 @@
     <PageLeading :title="'Cars'" />
     <!-- Results and choce -->
     <div
-      class="flex items-start min-h-[60vh] w-full flex-1 max-w-screen-lg px-4 py-6 mx-auto space-x-4"
+      class="flex md:flex-row flex-col items-start min-h-[60vh] w-full flex-1 max-w-screen-lg px-4 py-6 mx-auto space-x-4"
     >
       <!-- search -->
       <div
-        class="relative flex flex-col rounded-xl justify-start w-full max-w-xs min-h-[60vh] px-5 py-6 border my-shaddow spacey-4"
+        class="relative flex flex-col rounded-xl justify-start w-full md:max-w-xs min-h-[40vh] md:min-h-[60vh] px-5 py-6 border my-shaddow spacey-4"
       >
         <label for="oper" class="text-xl font-bold tracking-tighter text-left">
           Selectionner une Marque

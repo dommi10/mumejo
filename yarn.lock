@@ -9299,6 +9299,11 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
+vue-country-code@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/vue-country-code/-/vue-country-code-1.1.3.tgz#905400814b3b8615941d89e25e17612c619aa1e5"
+  integrity sha512-tc3q8iDfTGNo8fVECD6tnyDXYERDdRrbF7v5dx5SywfQfabHn4JDgjDtxBKJxXwSHJULRzeQphcYNuHu0+sx2Q==
+
 vue-country-flag@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/vue-country-flag/-/vue-country-flag-2.3.2.tgz#db500a8ee287675b2990360b6fa100cdf7d444c2"
