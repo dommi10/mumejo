@@ -86,15 +86,31 @@
                 >
                   Telephone*
                 </label>
-                <input
-                  id="tel"
-                  v-model="role.tel"
-                  :disabled="modal.loading"
-                  autocomplete="off"
-                  type="text"
-                  required
-                  class="text-xs w-full rounded-md focus:ring-[#006494] border-[#006494] text-[#006494]"
-                />
+                <div
+                  class="flex w-full space-x-2"
+                  :class="{ error: errorMessage.telephone }"
+                >
+                  <div class="flex w-auto space-x-">
+                    <vue-country-code
+                      id="country"
+                      name="country"
+                      :preferred-countries="['UG']"
+                      enabled-country-code
+                      class="dark:bg-white"
+                      @onSelect="onSelect"
+                    >
+                    </vue-country-code>
+                  </div>
+                  <input
+                    id="tel"
+                    v-model="role.tel"
+                    :disabled="modal.loading"
+                    autocomplete="off"
+                    type="text"
+                    required
+                    class="text-xs w-full rounded-md focus:ring-[#006494] border-[#006494] text-[#006494]"
+                  />
+                </div>
               </div>
             </div>
 
@@ -162,9 +178,9 @@ export default Vue.extend({
       default: "",
     },
     selectedRole: {
-      type: String,
+      type: Object,
       required: true,
-      default: "",
+      default() {},
     },
   },
   data() {
@@ -177,12 +193,14 @@ export default Vue.extend({
         email: null,
       },
       errorDelete: null,
+      tel: "",
       role: {
         id: "",
         noms: "",
         adresse: "",
         email: "",
         tel: "",
+        code: "",
       },
     };
   },
@@ -194,6 +212,9 @@ export default Vue.extend({
   },
 
   methods: {
+    onSelect({ dialCode }) {
+      this.role.code = dialCode;
+    },
     async validateAndSave() {
       if (this.validation()) {
         await this.saveDataChanges();
@@ -204,33 +225,28 @@ export default Vue.extend({
       this.errorMessage.noms = !validateAsString(this.role.noms)
         ? "cette noms est incorrecte"
         : null;
-      this.errorMessage.adresse = !validateAsStringNumber(this.role.adresse)
-        ? "cette adresse est incorrect"
-        : null;
+
       this.errorMessage.email =
         this.role.email && !validateAsEmail(this.role.email)
           ? "cet email est incorrect"
           : null;
       this.errorMessage.tel =
-        this.role.tel && !validateAsNumber(this.role.tel)
+        this.role.tel && !validateAsNumber(this.role.code + this.role.tel)
           ? "ce numero de telephone est incorrect"
           : null;
       if (
         validateAsString(this.role.noms) &&
-        validateAsStringNumber(this.role.adresse)
+        validateAsNumber(this.role.code + this.role.tel)
       ) {
         if (this.role.email && !validateAsEmail(this.role.email)) return false;
-        if (this.role.tel && !validateAsNumber(this.role.tel)) return false;
         return true;
       }
       this.errorDelete = !validateAsString(this.role.noms)
         ? "cette noms est incorrecte"
         : this.role.email && !validateAsEmail(this.role.email)
         ? "cet email est incorrect"
-        : this.role.tel && !validateAsNumber(this.role.tel)
+        : this.role.tel && !validateAsNumber(this.role.code + this.role.tel)
         ? "ce numero de telephone est incorrect"
-        : !validateAsStringNumber(this.role.adresse)
-        ? "cette adresse est incorrect"
         : null;
       return false;
     },
@@ -254,19 +270,17 @@ export default Vue.extend({
     },
     async saveDataChanges() {
       try {
+        this.tel = this.role.code + this.role.tel;
         this.$store.dispatch("modal/toogleModalLoading");
         this.errorDelete = null;
         this.status = this.role.id === "" ? "saving...." : "updating....";
-        const res =
-          this.role.id === ""
-            ? await this.$axios.post(`${this.url}`, {
-                ...this.role,
-                idEse: this.$cookies.get("entreprise").id,
-              })
-            : await this.$axios.put(`${this.url}/${this.role.id}`, {
-                ...this.role,
-                idEse: this.$cookies.get("entreprise").id,
-              });
+        const res = await this.$axios.post(`${this.url}`, {
+          ...this.role,
+          tel: this.tel,
+          carId: this.selectedRole.carId,
+          colorId: this.selectedRole.colorId,
+        });
+
         const { message } = res.data;
         this.$store.dispatch("modal/toogleModalLoading");
         if (message) {

@@ -21,10 +21,10 @@
     </div>
     <div
       v-else
-      class="flex pt-[0px] md:overflow-hidden flex-col md:flex-row md:items-start w-full md:min-h-[90vh] md:max-h-[90vh]"
+      class="flex pt-[0px] md:overflow-hidden flex-col md:flex-row md:items-start w-full md:min-h-[90vh] md:h-[90vh] md:max-h-[90vh]"
     >
       <div
-        class="relative w-full md:w-[70%] md:max-h-[90vh] md:min-h-[90vh] min-h-[40vh] max-h-[40vh]"
+        class="relative w-full md:w-[70%] md:max-h-[90vh] md:h-[90vh] md:min-h-[90vh] min-h-[40vh] max-h-[40vh]"
       >
         <img
           :src="selectedImage"
@@ -193,7 +193,7 @@
       </div>
     </div>
     <add-commande
-      :url="'/commande'"
+      :url="'/carCommande'"
       :selected-role="selectedRole"
       @refetch="refresh"
       @refreshData="refreshData"
@@ -221,6 +221,7 @@ export default {
       disableNext: false,
       disablePrev: true,
       activeColor: {},
+      selectedRole: {},
       activeIndex: 0,
       selectedImage:
         "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
@@ -236,6 +237,10 @@ export default {
     if (cars) {
       this.item = cars;
       this.activeColor = cars.colors.length > 0 ? cars.colors[0] : {};
+      this.selectedRole = {
+        colorId: this.activeColor.color.id,
+        carId: this.item.id,
+      };
     }
   },
   methods: {
@@ -262,6 +267,11 @@ export default {
           : "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg";
       this.activeColor = color;
       this.disableNext = false;
+      this.selectedRole = {
+        colorId: this.activeColor.color.id,
+        carId: this.item.id,
+      };
+      console.log(this.selectedRole);
     },
     back() {
       // this.$route.
