@@ -1,6 +1,8 @@
 <template>
   <div class="w-full border-t border-b h-[260px] flex space-x-2 items-start">
-    <div class="relative py-4 w-[252px] h-full max-w-xs rounded-md">
+    <div
+      class="relative py-4 min-w-[252px] h-full w-[252px] max-w-[252px] rounded-md"
+    >
       <img
         class="w-full h-full rounded-md object-fit"
         :src="

@@ -148,7 +148,7 @@
           </div>
         </div>
         <div class="pt-6 text-xs font-light text-center">
-          <article v-html="item.description" class="prose">
+          <article v-html="item.description" class="prose-sm prose">
             {{ item.description }}
           </article>
         </div>
@@ -225,6 +225,7 @@ export default {
       activeColor: {},
       selectedRole: {},
       activeIndex: 0,
+      images: [],
       selectedImage:
         "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
       item: {},
@@ -243,6 +244,12 @@ export default {
         colorId: this.activeColor.color.id,
         carId: this.item.id,
       };
+      cars.colors.forEach((element) => {
+        if (element.images.length > 0) {
+          element.images.forEach((item) => this.images.push(item.url));
+          this.selectedImage = this.images[0];
+        }
+      });
     }
   },
   methods: {
@@ -263,36 +270,36 @@ export default {
       };
     },
     changeColor(color) {
-      this.selectedImage =
-        color.images.length > 0
-          ? color.images[0].url
-          : "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg";
+      // if (color.images.length > 0) {
+      //   this.selectedImage =
+      //     color.images.length > 0
+      //       ? color.images[0].url
+      //       : "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg";
+      // }
       this.activeColor = color;
       this.disableNext = false;
       this.selectedRole = {
         colorId: this.activeColor.color.id,
         carId: this.item.id,
       };
-      console.log(this.selectedRole);
     },
     back() {
       // this.$route.
       this.$router.go(-1);
     },
     nextImage(index) {
-      if (this.activeColor.images.length > 0)
+      if (this.images.length > 0)
         this.activeIndex =
           this.activeIndex + index < 0
             ? 0
-            : this.activeIndex + index >= this.activeColor.images.length
-            ? this.activeColor.images.length - 1
+            : this.activeIndex + index >= this.images.length
+            ? this.images.length - 1
             : this.activeIndex + index;
       if (this.activeIndex === 0) this.disablePrev = true;
       else this.disablePrev = false;
-      if (this.activeIndex === this.activeColor.images.length - 1)
-        this.disableNext = true;
+      if (this.activeIndex === this.images.length - 1) this.disableNext = true;
       else this.disableNext = false;
-      this.selectedImage = this.activeColor.images[this.activeIndex].url;
+      this.selectedImage = this.images[this.activeIndex];
     },
   },
 };

@@ -57,7 +57,7 @@
           Try again
         </button>
       </div>
-      <div v-else class="w-full py-4">
+      <div v-else class="w-full">
         <div
           v-if="cars.length === 0"
           class="flex min-h-[60vh] items-center justify-center w-full h-full text-xl font-bold"
@@ -71,8 +71,8 @@
             :title="item.name"
             :url="`/car/${item.id}`"
             :imgUrl="
-              item.colors[0].images.length > 0
-                ? item.colors[0].images[0].url
+              item.colors.at(-1).images.length > 0
+                ? item.colors.at(-1).images[0].url
                 : ''
             "
             :description="item.description"
@@ -184,7 +184,7 @@ export default {
       disableSelect: false,
       cars: [],
       skip: 0,
-      take: 4,
+      take: 2,
       total: 0,
     };
   },
