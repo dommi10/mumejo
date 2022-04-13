@@ -1,5 +1,5 @@
 export default {
-  target: process.env.NODE_ENV === "production" ? "static" : "server",
+  // target: process.env.NODE_ENV === "production" ? "static" : "server",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "MumejoLog",
