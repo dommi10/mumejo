@@ -147,9 +147,11 @@
             </h5>
           </div>
         </div>
-        <p class="pt-6 text-xs font-light text-center">
-          * {{ item.description }}
-        </p>
+        <div class="pt-6 text-xs font-light text-center">
+          <article v-html="item.description" class="prose">
+            {{ item.description }}
+          </article>
+        </div>
         <p
           class="w-full pt-6 pb-2 text-2xl font-semibold tracking-tight text-center"
         >
