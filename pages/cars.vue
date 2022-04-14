@@ -70,11 +70,7 @@
             :key="item.id"
             :title="item.name"
             :url="`/car/${item.id}`"
-            :imgUrl="
-              item.colors.length > 0 && item.colors.at(-1).images.length > 0
-                ? item.colors.at(-1).images[0].url
-                : ''
-            "
+            :imgUrl="getCoverImge(item)"
             :description="item.description"
           />
           <div
@@ -203,6 +199,17 @@ export default {
   },
 
   methods: {
+    getCoverImge(cars) {
+      const images = [];
+      if (cars.colors.length > 0)
+        cars.colors.forEach((element) => {
+          if (element.images.length > 0) {
+            element.images.forEach((item) => images.push(item.url));
+          }
+        });
+      return images.length > 0 ? images[0] : "";
+    },
+
     getTipsOfRowsNumber() {
       if (this.total === 0) return "";
       return (
@@ -228,7 +235,14 @@ export default {
       const numbers = (this.total / Number.parseInt(this.take))
         .toFixed(2)
         .toString();
-      return parseInt(numbers.substring(numbers.lastIndexOf(".") + 1), 10) > 0
+
+      return parseInt(
+        numbers.substring(
+          numbers.lastIndexOf(".") + 1,
+          numbers.lastIndexOf(".") + 2
+        ),
+        10
+      ) > 5
         ? parseInt(numbers, 10) + 1
         : parseInt(numbers, 10);
     },
