@@ -67,6 +67,9 @@ export default {
       theme_color: "#000000",
       start_url: "/",
     },
+    workbox: {
+      /* workbox options */
+    },
   },
   i18n: {
     locales: [
