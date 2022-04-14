@@ -132,7 +132,6 @@
   </div>
 </template>
 <script>
-import emailjs from "emailjs-com";
 export default {
   props: {
     address: {
@@ -159,29 +158,6 @@ export default {
       markerLatLng: [0.1071124, 29.3253537],
       mailto: "mailto:mumejolog@gmail.com",
     };
-  },
-  methods: {
-    sendEmail(e) {
-      try {
-        emailjs.sendForm(
-          "YOUR_SERVICE_ID",
-          "YOUR_TEMPLATE_ID",
-          e.target,
-          "YOUR_USER_ID",
-          {
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }
-        );
-      } catch (error) {
-        console.log({ error });
-      }
-      // Reset form field
-      this.name = "";
-      this.email = "";
-      this.message = "";
-    },
   },
 };
 </script>

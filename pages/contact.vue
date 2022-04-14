@@ -2,12 +2,10 @@
   <div class="flex flex-col items-center justify-center w-full h-full">
     <PageLeading :title="title" />
     <Contact />
-    <!-- <Sponsor /> -->
   </div>
 </template>
 
 <script>
-import Sponsor from "../components/Sponsor.vue";
 import PageLeading from "~/components/PageLeading.vue";
 import Contact from "~/components/Contact.vue";
 import "leaflet/dist/leaflet.css";
@@ -26,7 +24,7 @@ export default {
       ],
     };
   },
-  components: { Sponsor, PageLeading, Contact },
+  components: { PageLeading, Contact },
   data() {
     return {
       title: this.$t("us"),
