@@ -64,6 +64,7 @@ export default {
       lang: "en",
       stort_name: "MumejoLog",
       name: "MumejoLog App",
+      theme_color: "#000000",
     },
   },
   i18n: {
