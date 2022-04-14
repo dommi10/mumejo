@@ -10,6 +10,8 @@
     </div>
     <form
       class="grid w-full grid-cols-1 gap-1 px-4 pt-20 md:px-0 lg:grid-cols-3 md:grid-cols-2 lg:gap-x-6"
+      :action="mailto"
+      method="GET"
     >
       <div class="flex flex-col w-full space-y-6 lg:col-span-2">
         <div class="grid grid-cols-2 gap-x-1 md:gap-x-0">
@@ -67,7 +69,7 @@
           </label>
           <input
             id="email"
-            name="email"
+            name="cc"
             type="email"
             required
             class="h-10 md:h-12 w-full text-[#777777] text-sm tracking-tight py-1 px-3 forcus:outline-none active:outline-none border-[#e6e2e2]"
@@ -112,9 +114,11 @@
       </div>
       <div class="flex flex-col w-full space-y-3">
         <textarea
-          name="message"
+          name="body"
           placeholder="Message"
           maxlength="1000"
+          cols="30"
+          rows="5"
           class="w-full h-full text-sm tracking-tight py-2 px-3 forcus:outline-none active:outline-none border-[#e6e2e2]"
         />
         <button
@@ -128,6 +132,7 @@
   </div>
 </template>
 <script>
+import emailjs from "emailjs-com";
 export default {
   props: {
     address: {
@@ -152,7 +157,31 @@ export default {
       zoom: 13,
       center: [0.1071124, 29.3253537],
       markerLatLng: [0.1071124, 29.3253537],
+      mailto: "mailto:mumejolog@gmail.com",
     };
+  },
+  methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          e.target,
+          "YOUR_USER_ID",
+          {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+      // Reset form field
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
   },
 };
 </script>
