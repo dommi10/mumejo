@@ -65,6 +65,7 @@ export default {
       stort_name: "MumejoLog",
       name: "MumejoLog App",
       theme_color: "#000000",
+      start_url: "/",
     },
   },
   i18n: {
