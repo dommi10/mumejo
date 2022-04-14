@@ -180,7 +180,12 @@ export default Vue.extend({
     selectedRole: {
       type: Object,
       required: true,
-      default() {},
+      default() {
+        return {
+          colorId: "",
+          carId: "",
+        };
+      },
     },
   },
   data() {

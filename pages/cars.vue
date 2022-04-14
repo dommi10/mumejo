@@ -71,7 +71,7 @@
             :title="item.name"
             :url="`/car/${item.id}`"
             :imgUrl="
-              item.colors.at(-1).images.length > 0
+              item.colors.length > 0 && item.colors.at(-1).images.length > 0
                 ? item.colors.at(-1).images[0].url
                 : ''
             "
@@ -247,6 +247,7 @@ export default {
       }
     },
     init() {
+      this.skip = 0;
       this.$fetch();
     },
     produitSelected(value) {

@@ -223,13 +223,12 @@ export default {
       disableNext: false,
       disablePrev: true,
       activeColor: {},
-      selectedRole: {},
+      selectedRole: { colorId: "", carId: "" },
       activeIndex: 0,
       images: [],
       selectedImage:
         "https://bafybeidp6wv4kgl2fwdwzplx2iny5wl55mw5yzm7bbvms3nbknn75xeys4.ipfs.dweb.link/temp/2022-04-08-17-51-50-5050-s4bpgeq-bmw.jpg",
       item: {},
-      selectedRole: this.$route.params.id,
     };
   },
   async fetch() {
@@ -262,11 +261,8 @@ export default {
     },
     refreshData() {
       this.selectedRole = {
-        id: "",
-        noms: "",
-        adresse: "",
-        email: "",
-        tel: "",
+        colorId: "",
+        carId: "",
       };
     },
     changeColor(color) {
