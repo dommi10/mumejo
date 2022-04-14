@@ -62,6 +62,8 @@ export default {
   pwa: {
     manifest: {
       lang: "en",
+      stort_name: "MumejoLog",
+      name: "MumejoLog App",
     },
   },
   i18n: {
